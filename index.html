@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victoria Yu</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+    <div class="nav-content">
+        <a href="#home">Home</a>
+        <span class="nav-star">✦</span>
+        <a href="#work">Work Experience</a>
+        <span class="nav-star">✦</span>
+        <a href="#leadership">Leadership</a>
+        <span class="nav-star">✦</span>
+        <a href="#hobbies">Hobbies</a>
+    </div>
+    </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Hi, I’m Victoria! 🪐</h1>
+        <p>
+          I’m a third-year Computer Science major at Cornell University (Graduating May 2027), originally from the Bay Area, California.
+          I’m highly interested in <span class="highlight-role">SWE, MLE, and TPM/PM</span> roles. My technical work spans ML, infra, and reliability in
+          high-trust domains, and has impacted millions of merchants and billions of users.
+        </p>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="profile.jpg" alt="Victoria Yu" class="profile-img">
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <h2>Work Experience</h2>
+
+      <div class="selector-layout">
+        <div class="selector-list">
+          <button class="selector-button active" data-target="work-google-2025">Google (Summer 2025)</button>
+          <button class="selector-button" data-target="work-google-2024">Google (Summer 2024)</button>
+           <button class="selector-button" data-target="work-h4i-icr">Hack4Impact (Ithaca Community Recovery)</button>
+           <button class="selector-button" data-target="work-h4i-okb">Hack4Impact (OKB Hope Foundation)</button>
+        </div>
+
+        <div class="selector-content">
+          <div class="selector-panel active" id="work-google-2025">
+            <div class="job">
+              <h3>Google (Summer 2025)<img src="googlelogo.png" alt="Google logo" class="inline-logo"></h3>
+              <ul>
+                <li>
+                  Core Machine Learning Infra (Python): pipeline streamlining complex multi-step workflow into a single
+                  command automating model inference, copyright checks, and risk explanation with greater
+                  flexibility in I/O format and parameters
+                </li>
+                <li>
+                  Google Mobile Services Core (Go): server feature recommending developers to CC on
+                  mobile crashes from fleet of 3B+ devices
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selector-panel" id="work-google-2024">
+            <div class="job">
+              <h3>Google (Summer 2024)<img src="googlelogo.png" alt="Google logo" class="inline-logo"></h3>
+              <ul>
+                <li>Merchant Trust (Java, SQL, C++): Developed data ingestion pipeline w/ FlumeJava to enhance abuse verification process for high-revenue merchants. Migrated second trust signal pipeline for 18.5M merchants ahead of platform deprecation; replaced obsolete logic and transitioned system from C++ to Java</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selector-panel" id="work-h4i-icr">
+            <div class="job">
+              <h3>Hack4Impact (Ithaca Community Recovery)<img src="hack4impactlogo.png" alt="Hack4Impact logo" class="inline-logo"></h3>
+              <ul>
+                <li>Built admin dashboard for addiction recovery orgs totaling 30K+ annual members; resolved critical bugs spanning frontend, backend, and API routes and presented at Cornell CS showcase</li>
+              </ul>
+              <a href="https://medium.com/cornellh4i/ithaca-community-recovery-streamlining-management-of-rental-spaces-for-recovery-oriented-meetings-3d263f53f49b" target="_blank" rel="noopener noreferrer">
+                <img src="icrphoto.jpg" alt="Ithaca Community Recovery project screenshot" class="project-img-cute">
+              </a>
+            </div>
+          </div>
+          <div class="selector-panel" id="work-h4i-okb">
+            <div class="job">
+              <h3>Hack4Impact (OKB Hope Foundation)<img src="hack4impactlogo.png" alt="Hack4Impact logo" class="inline-logo"></h3>
+              <ul>
+                <li>Developed and shipped telehealth booking website for Ghanaian psychiatrists and patients; created psychiatrist verification and recommendation logic</li>
+              </ul>
+              <a href="https://medium.com/cornellh4i/bridging-the-gap-connecting-patients-with-psychiatrists-and-demystifying-mental-health-in-ghana-4e9f2c076373" target="_blank" rel="noopener noreferrer">
+                <img src="okbhopephoto.jpg" alt="OKB Hope Foundation project screenshot" class="project-img-cute">
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="section">
+      <h2>Leadership</h2>
+
+      <div class="selector-layout">
+        <div class="selector-list">
+          <button class="selector-button active" data-target="leadership-wic">Women in Computing at Cornell</button>
+          <button class="selector-button" data-target="leadership-h4i">Hack4Impact (Product + Business)</button>
+        </div>
+
+        <div class="selector-content">
+          <div class="selector-panel active" id="leadership-wic">
+            <div class="job">
+              <h3>Women in Computing at Cornell<img src="wicclogo.png" alt="WICC logo" class="inline-logo"></h3>
+              <ul>
+                <li>
+                  Former Vice President of Academic Team: led 6 directors in organizing faculty, career development, and underclassmen outreach
+                  events open to 2K+ club members
+                </li>
+                <li>Also served as Mentorship Director, Faculty Relations Director</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="selector-panel" id="leadership-h4i">
+            <div class="job">
+              <h3>Hack4Impact (Product and Business)<img src="hack4impactlogo.png" alt="Hack4Impact logo" class="inline-logo"></h3>
+              <ul>
+                  <li>Project research + sourcing, drafting PRD for small funds endowment management project, club partnerships, fundraising, publications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="section">
+      <h2>Hobbies</h2>
+
+      <p>
+        <strong>🎭 Theater:</strong> I’ve performed in theater for 10+ years! I’ve starred in Alice in Wonderland,
+        A Midsummer Night’s Dream, Legally Blonde, etc. I’ve done real stage combat,
+        memorized hundreds of Shakespeare lines, and know the entire Hamilton discography by heart :)
+      </p>
+
+      <p>
+        <strong>🍵 Matcha:</strong> I’m also always looking to find interesting matcha desserts, such as Izumi Matcha’s
+        Yuzu Strawberry Fizzler, Matcha Town’s Matcha &amp; Yuzu-Shiso Sorbet, and Spot Dessert Bar’s
+        Matcha Lava Cake - and yes, Beli is my favorite social media!
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <span>✦</span>
+    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.selector-layout').forEach(layout => {
+      const buttons = layout.querySelectorAll('.selector-button');
+      const panels = layout.querySelectorAll('.selector-panel');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetId = button.getAttribute('data-target');
+
+          buttons.forEach(btn => btn.classList.remove('active'));
+          panels.forEach(panel => panel.classList.remove('active'));
+
+          button.classList.add('active');
+          layout.querySelector(`#${targetId}`).classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
