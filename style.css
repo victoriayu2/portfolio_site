@@ -1,26 +1,134 @@
-/* Cute and dynamic project images */
+/* === Project Card Layout Fix === */
 .project-img-cute {
   display: block;
-  max-width: 350px;
+  max-width: 340px;
   width: 100%;
-  margin: 16px 0 18px 0;
-  border-radius: 22px;
+  max-height: 180px;
+  object-fit: cover;
+  margin: 16px 0 10px 0;
+  border-radius: 18px;
   box-shadow: 0 2px 8px 0 rgba(80, 120, 100, 0.08), 0 0.5px 2.5px 0 rgba(60, 80, 60, 0.04);
   border: 2.5px solid #eaf3ee;
-  transition: transform 0.22s cubic-bezier(.4,1.6,.6,1), box-shadow 0.22s cubic-bezier(.4,1.6,.6,1);
-  cursor: pointer;
-}
-.project-img-cute:hover {
-  transform: none;
-  box-shadow: 0 4px 16px 0 rgba(80, 120, 100, 0.12), 0 1px 4px 0 rgba(60, 80, 60, 0.06);
-  border-color: #c9ddc4;
-}
-* {
-  box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+.job {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.case-study-link {
+  display: inline-block;
+  margin-top: 8px;
+  align-self: flex-start;
+  color: #365c3d !important;
+  transition: color 0.18s ease, text-decoration 0.15s ease, opacity 0.15s ease;
+}
+
+.selector-panel .job {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* === Section Spacing System === */
+section {
+  margin-top: 80px;
+}
+section:first-of-type {
+  margin-top: 0;
+}
+
+/* Navbar active link styles */
+.nav-link {
+  color: #2f3e34;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  position: relative;
+}
+.nav-link.active {
+  color: #5f7f63;
+  font-weight: 600;
+  /* No transform or box-shadow for active nav link (no lift) */
+}
+.nav-link.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #5f7f63;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+/* === Hero Pill Links === */
+.hero-link-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.hero-pill-link {
+  display: inline-flex;
+  align-items: center;
+  background: #eaf3ee;
+  color: #365c3d;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 6px 18px 6px 14px;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  opacity: 0.98;
+}
+
+.hero-pill-link:hover {
+  background: #dfeadb;
+  color: #2b3c2e;
+  box-shadow: 0 2px 8px 0 rgba(80, 120, 100, 0.07);
+  opacity: 1;
+}
+
+
+/* === Case Study Link Styling === */
+/* removed duplicate .case-study-link rule */
+.nav-link.active {
+  color: #5f7f63;
+  font-weight: 600;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #5f7f63;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0.6);
+  transform-origin: left;
+  transition: all 0.25s cubic-bezier(.4,1.4,.6,1);
+  pointer-events: none;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+}
+
+/* Ensure anchor scrolling lands sections comfortably below sticky navbar */
+#home,
+#work,
+#leadership,
+#hobbies {
+  scroll-margin-top: 170px;
 }
 
 body {
@@ -83,15 +191,16 @@ a {
 main {
   max-width: 980px;
   margin: 0 auto;
-  padding: 56px 56px 64px;
+  padding: 0 56px 64px;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .hero-text h1,
@@ -99,13 +208,16 @@ main {
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
 }
+.hero-text h1 {
+  margin-bottom: 10px;
+}
 
 .hero-text p {
-  margin: 0;
+  margin: 0 0 6px 0;
   max-width: 33ch;
   font-family: 'Inter', sans-serif;
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.58;
   color: #2f2f2f;
 }
 
@@ -125,12 +237,12 @@ main {
 
 .profile-img {
   border-radius: 16px;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: transform 0.25s cubic-bezier(.4,1.4,.6,1), box-shadow 0.25s cubic-bezier(.4,1.4,.6,1);
 }
 
 .profile-img:hover {
-  transform: translateY(-2px); /* instead of scale */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12), 0 0 0 4px rgba(111, 143, 115, 0.12);
 }
 
 .hero-image img {
@@ -310,9 +422,9 @@ main {
 }
 
 .footer-content a:hover {
-  color: #5f7f6b;
-}
-
+  color: #5f7f63;
+  text-decoration: underline;
+  opacity: 1;
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
