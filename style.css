@@ -43,6 +43,14 @@ button.pill-button:focus-visible {
   box-shadow: 0 2.5px 10px rgba(80, 120, 100, 0.14);
 }
 
+.pill-button:focus-visible,
+a.pill-button:focus-visible,
+.cta-button:focus-visible,
+button.pill-button:focus-visible {
+  outline: 3px solid rgba(95, 127, 99, 0.42);
+  outline-offset: 3px;
+}
+
 .pill-button svg,
 .pill-button img,
 a.pill-button svg,
@@ -164,6 +172,12 @@ section:first-of-type {
 .nav-link.active::after {
   opacity: 1;
   transform: scaleX(1);
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid rgba(95, 127, 99, 0.42);
+  outline-offset: 6px;
+  border-radius: 6px;
 }
 
 /* Ensure anchor scrolling lands sections comfortably below sticky navbar */
@@ -390,6 +404,13 @@ main {
   color: #365c3d;
 }
 
+.selector-button:focus-visible {
+  outline: 3px solid rgba(95, 127, 99, 0.42);
+  outline-offset: 2px;
+  background-color: #eef6eb;
+  color: #365c3d;
+}
+
 .selector-button.active {
   background-color: #dfeadb;
   color: #365c3d;
@@ -408,6 +429,12 @@ main {
 
 .selector-panel.active {
   display: block;
+}
+
+.selector-panel:focus-visible {
+  outline: 3px solid rgba(95, 127, 99, 0.32);
+  outline-offset: 6px;
+  border-radius: 8px;
 }
 
 .selector-panel .job {
