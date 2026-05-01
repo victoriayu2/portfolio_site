@@ -4,7 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Victoria Yu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260501-cta-fix">
+  <style>
+    .pill-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 7px 18px;
+      border: 1.5px solid #b9d3bd;
+      border-radius: 999px;
+      background: #f4f8f2;
+      color: #365c3d;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: none;
+      box-shadow: 0 1.5px 6px rgba(80, 120, 100, 0.08);
+    }
+
+    .pill-button img,
+    .pill-button svg {
+      display: inline-block;
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      max-width: 24px;
+      max-height: 24px;
+      object-fit: contain;
+    }
+  </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -77,7 +107,6 @@
                   mobile crashes from fleet of 3B+ devices
                 </li>
               </ul>
-              </ul>
             </div>
           </div>
 
@@ -86,7 +115,6 @@
               <h3>Google (Summer 2024)<img src="googlelogo.png" alt="Google logo" class="inline-logo"></h3>
               <ul>
                 <li>Merchant Trust (Java, SQL, C++): Developed data ingestion pipeline w/ FlumeJava to enhance abuse verification process for high-revenue merchants. Migrated second trust signal pipeline for 18.5M merchants ahead of platform deprecation; replaced obsolete logic and transitioned system from C++ to Java</li>
-              </ul>
               </ul>
             </div>
           </div>
@@ -101,7 +129,7 @@
               </ul>
               <div class="project-links-row">
                 <a href="https://github.com/cornellh4i/ithaca-recovery" target="_blank" rel="noopener noreferrer" class="pill-button">
-                  <img src="githublogo.svg" alt="GitHub logo" class="github-logo">
+                  <img src="githublogo.svg" alt="GitHub logo" class="github-logo" width="24" height="24">
                   <span>Explore GitHub Repo</span>
                 </a>
                 <a
@@ -126,7 +154,7 @@
               </ul>
               <div class="project-links-row">
                 <a href="https://github.com/cornellh4i/okb-hope" target="_blank" rel="noopener noreferrer" class="pill-button">
-                  <img src="githublogo.svg" alt="GitHub logo" class="github-logo">
+                  <img src="githublogo.svg" alt="GitHub logo" class="github-logo" width="24" height="24">
                   <span>Explore GitHub Repo</span>
                 </a>
                 <a
@@ -140,8 +168,6 @@
               </div>
               <img src="okbhopephoto.jpg" alt="OKB Hope Foundation project screenshot" class="project-img-cute">
             </div>
-            </div>
-          </div>
           </div>
         </div>
       </div>
