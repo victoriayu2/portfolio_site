@@ -1,14 +1,102 @@
+/* Shared pill button system */
+.project-links-row {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 2px 0;
+  flex-wrap: wrap;
+}
+
+.pill-button,
+.project-pill-link,
+.hero-pill-link,
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 7px 18px;
+  border: 1.5px solid transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 1.5px 6px rgba(80, 120, 100, 0.08);
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.pill-button-primary {
+  background: #f4f8f2;
+  border-color: #b9d3bd;
+  color: #365c3d;
+}
+
+.pill-button-primary:hover,
+.pill-button-primary:focus-visible {
+  background: #dfeadb;
+  border-color: #6f9475;
+  color: #2b3c2e;
+  box-shadow: 0 2.5px 10px rgba(80, 120, 100, 0.14);
+}
+
+.pill-button-secondary,
+.project-pill-link:not(.pill-button-primary),
+.hero-pill-link:not(.pill-button-primary),
+.github-link:not(.pill-button-primary) {
+  background: #f4f8f2;
+  border-color: #b9d3bd;
+  color: #365c3d;
+}
+
+.pill-button-secondary:hover,
+.pill-button-secondary:focus-visible,
+.project-pill-link:not(.pill-button-primary):hover,
+.project-pill-link:not(.pill-button-primary):focus-visible,
+.hero-pill-link:not(.pill-button-primary):hover,
+.hero-pill-link:not(.pill-button-primary):focus-visible,
+.github-link:not(.pill-button-primary):hover,
+.github-link:not(.pill-button-primary):focus-visible {
+  background: #dfeadb;
+  color: #2b3c2e;
+  border-color: #6f9475;
+  box-shadow: 0 2.5px 10px rgba(80, 120, 100, 0.14);
+}
+
+.pill-button img,
+.project-pill-link .github-logo,
+.hero-pill-link img,
+.github-link .github-logo {
+  width: 18px;
+  height: 18px;
+  margin-left: 0;
+  margin-right: 0;
+  object-fit: contain;
+}
+
+/* GitHub logo styling for inline use */
+.github-logo {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: middle;
+  transition: filter 0.18s;
+  filter: grayscale(0.2) brightness(0.95);
+}
+.github-logo:hover {
+  filter: brightness(0.7) drop-shadow(0 0 2px #333);
+}
 /* === Project Card Layout Fix === */
 .project-img-cute {
   display: block;
-  max-width: 340px;
   width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  margin: 16px 0 10px 0;
-  border-radius: 18px;
-  box-shadow: 0 2px 8px 0 rgba(80, 120, 100, 0.08), 0 0.5px 2.5px 0 rgba(60, 80, 60, 0.04);
-  border: 2.5px solid #eaf3ee;
+  max-width: 510px;
+  height: auto;
+  margin: 24px 0 10px 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(80, 120, 100, 0.12), 0 1px 4px rgba(60, 80, 60, 0.06);
+  border: 1.5px solid #b9d3bd;
 }
 
 .job {
@@ -16,14 +104,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.case-study-link {
-  display: inline-block;
-  margin-top: 8px;
-  align-self: flex-start;
-  color: #365c3d !important;
-  transition: color 0.18s ease, text-decoration 0.15s ease, opacity 0.15s ease;
 }
 
 .selector-panel .job {
@@ -64,34 +144,9 @@ section:first-of-type {
 /* === Hero Pill Links === */
 .hero-link-row {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   margin-top: 8px;
   flex-wrap: wrap;
-}
-
-.hero-pill-link {
-  display: inline-flex;
-  align-items: center;
-  background: #eaf3ee;
-  color: #365c3d;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.97rem;
-  font-weight: 500;
-  border-radius: 999px;
-  padding: 6px 18px 6px 14px;
-  text-decoration: none;
-  box-shadow: none;
-  transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
-  cursor: pointer;
-  letter-spacing: 0.01em;
-  opacity: 0.98;
-}
-
-.hero-pill-link:hover {
-  background: #dfeadb;
-  color: #2b3c2e;
-  box-shadow: 0 2px 8px 0 rgba(80, 120, 100, 0.07);
-  opacity: 1;
 }
 
 
@@ -120,7 +175,6 @@ section:first-of-type {
 .nav-link.active::after {
   opacity: 1;
   transform: scaleX(1);
-}
 }
 
 /* Ensure anchor scrolling lands sections comfortably below sticky navbar */
@@ -272,7 +326,9 @@ main {
 
 .job h3 {
   margin: 0 0 12px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: 100%;
   padding-bottom: 2px;
   border-bottom: 1.5px solid #c9ddc8;
   font-family: 'Inter', sans-serif;
